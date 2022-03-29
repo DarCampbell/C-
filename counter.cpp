@@ -14,27 +14,32 @@ Please enter the number of coins:
 The total is 6 dollars and 22 cents */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    double quarter, dimes, nickels, pennies, sum;
+    double quarter, dimes, nickels, pennies, sum, dollar, cent;
 
     cout << " Please enter the number of coins:" << endl;
 
-    cout << "# of quarter: "<<endl;
+    cout << "# of quarter: ";
     cin >> quarter;
-    cout << "# of dimes: "<<endl;
+    cout << "# of dimes: ";
     cin >> dimes;
     cout << "# of nickels: "; 
     cin >> nickels; 
-    cout << "# of pennies: " << endl; 
+    cout << "# of pennies: "; 
     cin >> pennies;
 
     sum = quarter + dimes + nickels + pennies; 
+    cent = modf(sum, &dollar);
 
-    cout << "The total is" << sum; 
+    cout << "The total is " << dollar << " dollars and " << cent << " cents."; 
+
+    
     
    return 0;
+}
 }
