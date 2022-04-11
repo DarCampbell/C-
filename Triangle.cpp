@@ -6,8 +6,7 @@ class Triangle
 {
     public:
 
-        Triangle(int initalsideA, int initalsideB, int initalsideC);
-        ~Triangle();
+        
         int Getsides();
         void Setsides(int sideA, int sideB, int sideC);
         void area(int sideA, int sideB, int sideC);
@@ -20,32 +19,32 @@ class Triangle
 
 };
 
-Triangle::Triangle(int initalsideA, int initalsideB, int initialsideC)
+int Triangle::Triangle(int initalsideA, int initalsideB, int initialsideC)
 {
     trianglesideA = initalsideA;
     trianglesideB = initalsideB;
     trianglesideC = initialsideC;
 }
-~Triangle()
+int Triangle::~Triangle()
 {
 
 }
-Getsides()
+int Triangle::Getsides()
 {
     return trianglesideA, trianglesideB, trianglesideC;
 }
-Setsides(int sideA, int sideB, int sideC)
+void Triangle::Setsides(int sideA, int sideB, int sideC)
 {
     trianglesideA = sideA;
     trianglesideB = sideB;
     trianglesideC = sideC;
 }
-area(int sideA, int sideB, int sideC)
+void Triangle::area(int sideA, int sideB, int sideC)
 {
     int triangleArea = sideA * sideB * sideC;
     cout << "The area of the triangle is: " << triangleArea;
 }
-perimeter(int sideA, int sideB, int sideC)
+void Triangle::perimeter(int sideA, int sideB, int sideC)
 {
     int triangleperimeter = sideA + sideB + sideC;
     cout <<"The perimeter of the triangle is: " << triangleperimeter;
