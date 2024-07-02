@@ -1,0 +1,17 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+//function creates the dialog box 
+int dialogBox = MessageBox(
+	NULL, // no owner window 
+	(LPCWSTR)L"Hello World!",//body of the dialog box
+	(LPCWSTR)L"Hello World", //header of the dialog box
+	MB_OK // add the ok button to the dialog box
+);
+
+int main()
+{
+	//calls the dialogbox function 
+	dialogBox;
+}
